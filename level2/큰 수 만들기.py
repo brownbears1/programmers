@@ -70,17 +70,14 @@ def solution(number, k):
     return answer
 
 
-# assert solution('1924', 2) == '94'
-# assert solution('1231234', 3) == '3234'
-# assert solution('4177252841', 4) == '775841'
-# assert solution('999', 1) == '99'
-# assert solution('111119', 3) == '119'
-# assert solution('10000', 1) == '1000'
-# assert solution("7777777", 2) == "77777"
-# assert solution("01010", 3) == "11"
-
-# assert solution('77777', 1) == '7777'
-# assert solution('11', 1) == '1'
+assert solution('1924', 2) == '94'
+assert solution('1231234', 3) == '3234'
+assert solution('4177252841', 4) == '775841'
+assert solution('999', 1) == '99'
+assert solution('111119', 3) == '119'
+assert solution('10000', 1) == '1000'
+assert solution("7777777", 2) == "77777"
+assert solution("01010", 3) == "11"
+assert solution('77777', 1) == '7777'
+assert solution('11', 1) == '1'
 assert solution('9999999', 1) == '999999'
-
-number[:k+1] = number[:-1]
