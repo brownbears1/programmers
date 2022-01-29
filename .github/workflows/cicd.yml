@@ -45,12 +45,17 @@ jobs:
     needs: build
 
     runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@master
-        - name: Merge main -> develop
-            uses: devmasx/merge-branch@master
-            with:
-              type: now
-              from_branch: main
-              target_branch: develop
-              github_token: ${{ github.token }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Merge main -> develop
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: main
+          target_branch: develop
+          github_token: ${{ github.token }}
