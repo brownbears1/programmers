@@ -2,7 +2,7 @@ name: Delete Branch & Create Branch
 
 on:
   schedule:
-    - cron: '0 21 * * 1-5'
+    - cron: '0 21 * * *'
 
 jobs:
   delete-branch:
