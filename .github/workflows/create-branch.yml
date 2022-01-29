@@ -17,12 +17,18 @@ jobs:
           branches: test-branch
 
   create-branch:
+    needs: delete-branch
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
       - name: create branch
         uses: peterjgrainger/action-create-branch@v2.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          branch: 'release-notes'
+          branch: test-branch
