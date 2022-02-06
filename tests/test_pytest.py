@@ -4,3 +4,7 @@ def test_answer():
 
 def test_tc2():
     assert 1 == 1
+
+
+def test_tc3():
+    assert 1 == 2
