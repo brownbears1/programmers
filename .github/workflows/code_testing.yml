@@ -18,8 +18,8 @@ jobs:
         python-version: "3.8"
     - uses: actions/cache@v2
       with:
-        path: ~/.cache/pip
-        key: ${{ hashFiles('setup.py') }}-${{ hashFiles('requirements.txt') }}
+        path: ${{ env.pythonLocation }}
+        key: ${{ env.pythonLocation }}-${{ hashFiles('setup.py') }}-${{ hashFiles('dev-requirements.txt') }}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
