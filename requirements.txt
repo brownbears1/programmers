@@ -234,6 +234,7 @@ wheel==0.37.0
 wrapt==1.13.3
 WTForms==2.3.3
 zipp==3.5.0
-apache-airflow-providers-slack
+apache-airflow-providers-slack==4.1.0
 pytest
 pre-commit
+
