@@ -1,5 +1,5 @@
 def test_answer():
-    assert 1 == 1
+    assert 10 == 10
 
 
 def test_tc2():
