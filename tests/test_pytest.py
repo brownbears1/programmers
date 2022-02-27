@@ -7,4 +7,4 @@ def test_tc2():
 
 
 def test_tc3():
-    assert 3 == 3
+    assert 10 == 10
