@@ -1,11 +1,12 @@
+name: Restrict merge from develop to main
+
+
 on:
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 jobs:
-    merge_check:
+  build:
     runs-on: ubuntu-latest
     steps:
-      -  name: Check if the pull request is mergeable to master
-          run: |
-               if [[ "$GITHUB_HEAD_REF" == 'example' ]]; then exit 0; else exit 1; fi;
+    - name: Check if the pull request is mergeable to master
+      run: if [[ "$GITHUB_HEAD_REF" == 'example' ]]; then exit 0; else exit 1; fi;
